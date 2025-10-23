@@ -43,6 +43,12 @@ function App() {
     
   }
 
+  function ResetGame(){
+    setBoard(board)
+    setWinner(null)
+    setTurn('')
+  }
+
 
 
   return (
@@ -51,7 +57,7 @@ function App() {
       <div className="heading">
         <h1>Player {Turn}'s Turn</h1>
         <h1>player {Winner} won</h1>
-        <button className='border-2 border-amber-300 p-3 bg-amber-100'>
+        <button className='border-2 border-amber-300 p-3 bg-amber-100' onClick={ResetGame}>
           Reset Game
         </button>
       </div>
